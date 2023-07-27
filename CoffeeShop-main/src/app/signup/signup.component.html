@@ -1,0 +1,51 @@
+<div class="container" style="margin: 0px;padding: 0px;">
+  <form [formGroup]="signUp"  (ngSubmit)="Signedup(signUp)" class="form-box">
+      <h3>Register Your Details</h3>
+      <div class="form-group">
+          <label>First Name</label>
+          <input type="text" formControlName="fname" class="form-control " placeholder="First Name">
+      </div>
+      <small class="text-danger" *ngIf="signUp.controls['fname'].dirty && signUp.hasError('required','fname')">*FirstNameis required <br></small>
+      <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" formControlName="lname" class="form-control " placeholder="Last Name">
+      </div>
+      <div class="form-group">
+          <label>Email</label>
+          <input type="email" formControlName="email" class="form-control " placeholder="Enter your Email">
+      </div>
+      <small class="text-danger" *ngIf="signUp.controls['email'].dirty && signUp.hasError('required','email')">Email is required <br></small>
+      <div class="form-group">
+          <label>Mobile Number</label>
+          <input type="number" formControlName="Mobileno" class="form-control " placeholder="Enter your Mobile Number">
+      </div>
+      <div class="form-group">
+          <label>Password</label>
+          <input type="password" formControlName="password" class="form-control " >
+      </div>
+      <small class="text-danger" *ngIf="signUp.controls['password'].dirty && signUp.hasError('required','password')">Password is required <br></small>
+
+      <span>You have Already Account<a  role="button" (click)="stn()" style="color: red;">&nbsp; &nbsp;SignIn</a></span>
+      <br/>
+      <button [disabled]="signUp.invalid" type="submit" class="btn btn-success">SignUp</button>
+  </form>
+
+    <form [formGroup]="login" (ngSubmit)="logindata(login)" class="form-box1">
+        <h3>Login</h3>
+        <div class="form-group">
+            <label>User Name</label>
+            <input type="text" formControlName="fname" class="form-control mb-3 mt-3" placeholder="Enter Your Email">
+        </div>
+        <small class="text-danger" *ngIf="login.controls['fname'].dirty && login.hasError('required','fname')">UserName is required</small>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="Passwrod" formControlName="password" class="form-control mb-3 mt-3" placeholder="Enter Your Password">
+        </div>
+  
+        <small class="text-danger" *ngIf="login.controls['password'].dirty && login.hasError('required','password')">Password is required <br></small>
+  
+        <span>Create New Account<a  role="button" (click)="stn1()" style="color: red;">&nbsp; &nbsp;SignUp</a></span>
+        <br/>
+        <button [disabled]="login.invalid" type="submit" class="btn btn-success">login</button>
+    </form>
+  </div>

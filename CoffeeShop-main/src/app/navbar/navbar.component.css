@@ -1,0 +1,15 @@
+main{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+nav{
+    z-index: 2;
+}
+app-side-nav{
+    position: absolute;
+    left: 0rem;
+    width: 200px;
+    height: 100vh;
+    box-shadow: 0px 0px 5px;
+}

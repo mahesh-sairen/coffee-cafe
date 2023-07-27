@@ -1,0 +1,18 @@
+.form-box{
+    width: 335px;
+    height: auto;
+    padding: 25px;
+    position: absolute;
+    left: 36%;
+    border-radius: 5%;
+    display: block;
+}
+.form-box1{
+    width: 300px;
+    height: auto;
+    padding: 25px;
+    position: absolute;
+    left: 36%;
+    border-radius: 5%;
+    display: none;
+}
